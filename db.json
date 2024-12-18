@@ -1,0 +1,223 @@
+    {
+        "movies": [
+        {
+            "rank": 1,
+            "title": "The Shawshank Redemption",
+            "IMDB": 9.3,
+            "year": 1994,
+            "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+            "poster": "https://images.squarespace-cdn.com/content/v1/5c75dfa97d0c9166551f52b1/9351f4e2-94f9-42e2-81df-003d5fe7b8e0/9964546b0ba1f6e14a6045e34b341f8ca2a3569752c5afed95b89682fcde1a68._RI_V_TTW_.jpg?format=2500w"
+        },
+        {
+            "rank": 2,
+            "IMDB": 9.2,
+            "title": "The Godfather",
+            "year": 1972,
+            "description": "The aging patriarch of an organized crime dynasty transfers control to his reluctant son.",
+            "poster": "https://upload.wikimedia.org/wikipedia/en/thumb/a/af/The_Godfather%2C_The_Game.jpg/220px-The_Godfather%2C_The_Game.jpg"
+        },
+        {
+            "rank": 3,
+            "title": "The Dark Knight",
+            "IMDB": 9.0,
+            "year": 2008,
+            "description": "When the menace known as the Joker emerges, Batman must accept his greatest psychological and physical tests.",
+            "poster": "https://m.media-amazon.com/images/S/pv-target-images/e9a43e647b2ca70e75a3c0af046c4dfdcd712380889779cbdc2c57d94ab63902.jpg"
+        },
+        {
+            "rank": 4,
+            "title": "The Godfather Part II",
+            "IMDB": 9.0,
+            "year": 1974,
+            "description": "The early life and career of Vito Corleone in 1920s New York is portrayed, while his son expands the family empire.",
+            "poster": "https://s3.amazonaws.com/nightjarprod/content/uploads/sites/192/2022/10/17140449/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg"
+        },
+        {
+            "rank": 5,
+            "title": "12 Angry Men",
+            "IMDB": 9.0,
+            "year": 1957,
+            "description": "A jury holdout attempts to prevent a miscarriage of justice by forcing his colleagues to reconsider the evidence.",
+            "poster": "https://upload.wikimedia.org/wikipedia/commons/b/b5/12_Angry_Men_%281957_film_poster%29.jpg"
+        },
+        {
+            "rank": 6,
+            "title": "The Lord of the Rings: The Return of the King",
+            "IMDB": 9.0,
+            "year": 2003,
+            "description": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam.",
+            "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtXl0ymI_Pn6vZyEmhgTuWVgiO-ikTK6BtVw&s"
+        },
+        {
+            "rank": 7,
+            "title": "Schindler's List",
+            "IMDB": 9.0,
+            "year": 1993,
+            "description": "In German-occupied Poland during World War II, Oskar Schindler saves the lives of more than a thousand Jews.",
+            "poster": "https://m.media-amazon.com/images/I/81+H4lZVw+L.jpg"
+        },
+        {
+            "rank": 8,
+            "title": "Pulp Fiction",
+            "IMDB": 8.9,
+            "year": 1994,
+            "description": "The lives of two mob hitmen, a boxer, and two diner bandits intertwine in a series of tales.",
+            "poster": "https://m.media-amazon.com/images/I/71ox+EoFO7L.jpg"
+        },
+        {
+            "rank": 9,
+            "title": "The Lord of the Rings: The Fellowship of the Ring",
+            "IMDB": 8.9,
+            "year": 2001,
+            "description": "A meek Hobbit and his eight companions set out on a journey to destroy the powerful One Ring.",
+            "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeuey6KAUSCkkW3LqGHIFsTfkTW_a-oVMabA&s"
+        },
+        {
+            "rank": 10,
+            "title": "Il buono, il brutto, il cattivo",
+            "IMDB": 8.8,
+            "year": 1966,
+            "description": "A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find gold.",
+            "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkjeH4o6sL7p-qZlSfSithpmW12GupAlBpuw&s"
+        }
+        ],
+
+    
+
+    
+
+            "CityArray": [
+            {
+                "city": "Umeå",
+                "adress": ["Nygatan 1B", "90335", "Umeå"],
+                "phoneNumber": "0321215150",
+                "email": "umea@godiskungen.se",
+                "isOpen": true,
+                "openHours": "10:00 - 22:00"
+            },
+            {
+                "city": "Skellefteå",
+                "adress": ["Storgatan 15b", "90465", "Skellefteå"],
+                "phoneNumber": "0321215151",
+                "email": "Skellefteå@godiskungen.se",
+                "isOpen": true,
+                "openHours": "10:00 - 22:00"
+            },
+            {
+                "city": "Luleå",
+                "adress": ["Norrskensgatan", "97231", "Luleå"],
+                "phoneNumber": "0321215152",
+                "email": "Luleå@godiskungen.se",
+                "isOpen": true,
+                "openHours": "10:00 - 22:00"
+            },
+            {
+                "city": "Gävle",
+                "adress": ["Gävlegatan 1", "97231", "Gävle"],
+                "phoneNumber": "0321215153",
+                "email": "Gävle@godiskungen.se",
+                "isOpen": true,
+                "openHours": "10:00 - 22:00"
+            },
+            {
+                "city": "Uppsala",
+                "adress": ["Uppsalagatan 25", "741 76", "Uppsala"],
+                "phoneNumber": "0321215154",
+                "email": "Uppsala@godiskungen.se",
+                "isOpen": true,
+                "openHours": "10:00 - 22:00"
+            },
+            {
+                "city": "Sundsvall",
+                "adress": ["Strandgatan 25", "852 29", "Sundsvall"],
+                "phoneNumber": "0321215155",
+                "email": "Sundsvall@godiskungen.se",
+                "isOpen": true,
+                "openHours": "10:00 - 22:00"
+            },
+            {
+                "city": "Stockholm syd",
+                "adress": ["Strandgatan 75", "104 65", "Stockholm"],
+                "phoneNumber": "0321215156",
+                "email": "StockholmSyd@godiskungen.se",
+                "isOpen": true,
+                "openHours": "10:00 - 22:00"
+            },
+            {
+                "city": "Stockholm Nord",
+                "adress": ["Kista Galleria", "63 62", "Kista"],
+                "phoneNumber": "0321215157",
+                "email": "stockholmNord@godiskungen.se",
+                "isOpen": true,
+                "openHours": "10:00 - 22:00"
+            },
+            {
+                "city": "Göteborg",
+                "adress": ["Göteborg Hamngata 2", "411 01", "Göteborg"],
+                "phoneNumber": "0321215158",
+                "email": "göteborg@godiskungen.se",
+                "isOpen": true,
+                "openHours": "10:00 - 22:00"
+            },
+            {
+                "city": "Malmö",
+                "adress": ["Möllevångstorget", "211 13", "Malmö"],
+                "phoneNumber": "0321215159",
+                "email": "Malmö@godiskungen.se",
+                "isOpen": true,
+                "openHours": "10:00 - 22:00"
+            }
+            ],
+        
+        
+                "FAQArray": [
+                {
+                    "title": "Why is javascript cool?",
+                    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda minus consectetur quasi placeat fuga culpa tenetur fugit quae esse architecto adipisci iste dignissimos sit saepe nisi eius, rerum eos corrupti."
+                },
+                {
+                    "title": "What is javscript?",
+                    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda minus consectetur quasi placeat fuga culpa tenetur fugit quae esse architecto adipisci iste dignissimos sit saepe nisi eius, rerum eos corrupti."
+                },
+                {
+                    "title": "What is javscript so ez?",
+                    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda minus consectetur quasi placeat fuga culpa tenetur fugit quae esse architecto adipisci iste dignissimos sit saepe nisi eius, rerum eos corrupti."
+                },
+                {
+                    "title": "What is javscript so ez?",
+                    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda minus consectetur quasi placeat fuga culpa tenetur fugit quae esse architecto adipisci iste dignissimos sit saepe nisi eius, rerum eos corrupti."
+                },
+                {
+                    "title": "What is javscript so ez?",
+                    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda minus consectetur quasi placeat fuga culpa tenetur fugit quae esse architecto adipisci iste dignissimos sit saepe nisi eius, rerum eos corrupti."
+                },
+                {
+                    "title": "What is javscript so ez?",
+                    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda minus consectetur quasi placeat fuga culpa tenetur fugit quae esse architecto adipisci iste dignissimos sit saepe nisi eius, rerum eos corrupti."
+                },
+                {
+                    "title": "What is javscript so ez?",
+                    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda minus consectetur quasi placeat fuga culpa tenetur fugit quae esse architecto adipisci iste dignissimos sit saepe nisi eius, rerum eos corrupti."
+                },
+                {
+                    "title": "What is javscript so ez?",
+                    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda minus consectetur quasi placeat fuga culpa tenetur fugit quae esse architecto adipisci iste dignissimos sit saepe nisi eius, rerum eos corrupti."
+                },
+                {
+                    "title": "What is javscript so ez?",
+                    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda minus consectetur quasi placeat fuga culpa tenetur fugit quae esse architecto adipisci iste dignissimos sit saepe nisi eius, rerum eos corrupti."
+                }
+                ],
+
+                "infoHomepageOne": [
+                    {
+                        "title": "Vilka är vi?",
+                            "details": "Letar du efter den perfekta filmen för fredagsmyset eller en serie att sträckkolla under helgen? Då har du kommit rätt! Här hittar du allt från tidlösa klassiker och spännande thrillers till de senaste storfilmerna och populära serierna som alla pratar om.",
+                            "imgURL": "https://st2.depositphotos.com/1105977/9877/i/450/depositphotos_98775856-stock-photo-retro-film-production-accessories-still.jpg"
+        } ]
+                    }
+
+                    
+                    
+
+
