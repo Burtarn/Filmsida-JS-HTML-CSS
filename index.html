@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS\styles.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Fredagsmys Inc.</a>
+
+            
+
+            <i class="bx bx-menu" id="menu-icon"></i>
+            
+
+            <nav class="navbar">
+                <a href="#home" id="underline">Hem</a>
+                <a href="movies.html">Filmer</a>
+                <a href="faq.html">FAQ</a>
+                <a href="citysearch.html">Kontakt</a>
+                
+            </nav>
+    </header>
+    <nav class="sub-navbar">
+        <ul>
+            <li><a href="#aboutUsContainer">Om oss</a></li>
+            <li><a href="#latest">Senaste Nytt</a></li>
+            <li><a href="#genres">Genrer</a></li>
+            <li><a href="#movieContainer">IMDB Top 10</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="hero-section">
+            <img src="images\ticket-2974645_1280.jpg" alt="En inspirerande bild för Fredagsmys" class="hero-image">
+        </section>
+        <section id="aboutUsContainer"></section>
+        <section id="infContainerTwo"></section>
+        <section id="infContainerThree"></section>
+        <section id="movieContainer">
+            <h1 id="sectionText">IMDB TOP 10</h1>
+            <div class="container swiper">
+                <div class="slider-wrapper">
+                        <div class="card-list swiper-wrapper"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+            <section id="tabletContainer">
+                <h1 class="tabletText">Streama från din favoritenhet:</h1>
+                <div class="icon-container">
+                    <i class="fa-solid fa-tv fa-3x"></i>
+                    <p>TV</p>
+                </div>
+                <div class="icon-container">
+                    <i class="fa-solid fa-laptop fa-3x"></i>
+                    <p>Laptop</p>
+                </div>
+                <div class="icon-container">
+                    <i class="fa-solid fa-mobile fa-3x"></i>
+                    <p>Mobile</p>
+                </div>
+            </section>
+            <section>
+                <div id="mainContainer">
+                    <div id="infoCont"></div>
+                    <div id="imageContainer">
+                        <img src="images\cinema-4213751_640.jpg" alt="Bild på biograf." />
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+        <footer class="site-footer">
+            <div class="footer-container">
+            <div class="footer-column">
+                <h3>Om Oss</h3>
+                <p>Letar du efter den perfekta filmen för fredagsmyset eller en serie att sträckkolla under helgen? Då har du kommit rätt! Här hittar du allt från tidlösa klassiker och spännande thrillers till de senaste storfilmerna och populära serierna som alla pratar om.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Snabblänkar</h3>
+                <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="movies.html">Filmer</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="citysearch.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Kontakt</h3>
+                <ul>
+                <li>Email: info@fredagsmys.se</li>
+                <li>Telefon: 012-3456789</li>
+                <li>Adress: Gatuvägen 123, Stockholm</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Följ Oss</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="bx bxl-facebook"></i></a>
+                    <a href="#"><i class="bx bxl-instagram"></i></a>
+                    <a href="#"><i class="bx bxl-tiktok"></i></a>
+                    <a href="#"><i class="bx bxl-twitter"></i></a>
+            </div>
+            </div>
+            </div>
+            <div class="footer-bottom">
+            <p>&copy; 2024 Fredagsmys inc. Alla rättigheter förbehållna.</p>
+            </div>
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>    
+    <script src="JS\script.js"></script>
+</body>
+</html>
