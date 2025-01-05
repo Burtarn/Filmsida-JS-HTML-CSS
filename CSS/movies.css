@@ -172,7 +172,8 @@ span {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 20px;
-        background-color: var(--prussian-blue);
+
+
     }
     
     .movie {
@@ -182,6 +183,7 @@ span {
         overflow: hidden;
         transition: transform 0.2s, box-shadow 0.2s;
         border: 2px solid var(--mint);
+
     }
     
     .movie:hover {
@@ -197,16 +199,21 @@ span {
     
     .movie-details {
         padding: 15px;
+
     }
     
     .movie-details h2 {
         font-size: 18px;
         margin: 0 0 10px;
+
+
     }
     
     .movie-details p {
         margin: 5px 0;
-        color: #555;
+
+
+
     }
 
     #favoritesContainer {
