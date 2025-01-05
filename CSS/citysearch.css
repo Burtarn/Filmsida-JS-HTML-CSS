@@ -226,17 +226,18 @@ span {
     }
     
     #searchBar {
-        width: 300px; /* Du kan justera detta */
+        width: 300px; 
         padding: 10px;
         margin-bottom: 10px; 
-        border: 1px solid #ccc;
+        border: 2px solid var(--mint);
         border-radius: 5px;
+        background-color: var(--prussian-blue);
     }
     
     #searchBtn {
         padding: 10px 20px;
         background-color: var(--mint);
-        color: #fff;
+        color: var(--prussian-blue);
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -310,7 +311,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--prussian-blue);
     padding: 30px;
     border-radius: 10px;
     backdrop-filter: blur(10px); /* Ljus suddig bakgrund */

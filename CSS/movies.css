@@ -20,7 +20,9 @@
         --mint: #09bc8aff;
     }    
 
-    
+::placeholder {
+    color: var(--mint);
+}    
 
     body {
         background: var(--prussian-blue);
@@ -141,6 +143,7 @@ span {
     
     #searchInput:focus {
         border-color: var(--mint);
+        
     }
 
     
@@ -172,6 +175,7 @@ span {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 20px;
+        background-color: var(--prussian-blue);
 
 
     }
@@ -269,7 +273,7 @@ span {
 
     .movieFavorite p {
         font-size: 1.4rem;
-        color: var(--carolina-blue);
+        color: var(--mint);
         text-align: center;
     }
     
@@ -287,7 +291,12 @@ span {
         cursor: pointer;
         padding: 10px;
         border-radius: 10px;
-
+        background-color: var(--prussian-blue);
+        color: var(--mint);
+    }
+    .favorite-button {
+        transform: translateY(-1.5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
     .remove-favorite-btn {
@@ -299,6 +308,7 @@ span {
         padding: 5px;
         border-radius: 10px;
         margin: 10px;
+        color: var(--mint);
     }
 
     .remove-favorite-btn:hover {
@@ -307,6 +317,7 @@ span {
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         
     }
+
     
     
     /* Footer-styling */
@@ -432,7 +443,7 @@ span {
     }
 
     .movie {
-        background: white;
+        background: var(--prussian-blue);
         padding: 10px;
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -450,12 +461,12 @@ span {
     .movie h3 {
         font-size: 14px;
         margin: 10px 0 5px;
-        color: #333;
+        color: var(--mint);
     }
 
     .movie p {
         font-size: 12px;
-        color: #777;
+        color: var(--mint);
     }
     
     h1 {
@@ -485,6 +496,7 @@ span {
         background-color: var(--prussian-blue);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease; 
+
     }
     
     .movieTrend:hover {
@@ -505,7 +517,7 @@ span {
     
     .movieTrend p {
         font-size: 0.9rem;
-        color: gray;
+        color: var(--mint);
         margin-bottom: 10px; 
     }
     .modal {
@@ -560,7 +572,7 @@ span {
 
     .movie-info-btn {
         background-color: var(--prussian-blue);
-        color: white;
+        color: var(--mint);
         padding: 6px 10px;
         border: solid 1px var(--mint);
         border-radius: 5px;

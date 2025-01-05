@@ -212,7 +212,7 @@ function displayFavorites() {
         movieDiv.innerHTML = `
             <img src="${posterPath}" alt="${movie.title}">
             <h3>${movie.title}</h3>
-            <p>${movie.release_date || 'Okänt utgivningsdatum'}</p>
+            <p>${movie.release_date}</p>
             <button class="remove-favorite-btn" onclick='removeFromFavorites(${JSON.stringify(movie)})'>Ta bort från favoriter</button>
         `;
         favoritesContainer.appendChild(movieDiv);

@@ -293,6 +293,8 @@
     
     }
 
+    
+
 
     #sectionText {
         color: var(--mint);
@@ -386,6 +388,8 @@
     .icon-container {
         text-align: center; 
     }
+
+
     
     .icon-container i {
         color: var(--mint);
