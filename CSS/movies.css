@@ -142,6 +142,7 @@ span {
     #searchInput:focus {
         border-color: var(--mint);
     }
+
     
     #searchButton {
         padding: 10px 15px;
@@ -514,7 +515,7 @@ span {
     }
     
     .modal-content {
-        background-color: #fff;
+        background-color: var(--prussian-blue);
         padding: 20px;
         border-radius: 8px;
         max-width: 500px;
@@ -522,6 +523,7 @@ span {
         margin: auto;
         text-align: center;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        border: solid 3px var(--mint);
     }
     
     .modal-content h2 {
@@ -531,8 +533,9 @@ span {
     
     .modal-content p {
         margin: 10px 0;
-        color: #333;
+        color: var(--mint);
     }
+
     
     .close {
         position: absolute;
@@ -624,7 +627,7 @@ span {
         font-size: 2.4rem;
         margin-bottom: 20px;
     }  
-    
+
     
     
 
