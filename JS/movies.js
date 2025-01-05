@@ -294,6 +294,7 @@ function renderMovies(movies) {
         movieDiv.innerHTML = `
             <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}">
             <h3>${movie.title}</h3>
+            <p><strong>Handling:</strong> ${movie.overview}</p>
             <p>Utgivningsår: ${movie.release_date ? movie.release_date.split('-')[0] : 'Okänt'}</p>
         `;
         container.appendChild(movieDiv);
