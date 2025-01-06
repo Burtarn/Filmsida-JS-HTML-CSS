@@ -27,3 +27,6 @@ Kom igång:
 
 
 Figma: https://www.figma.com/design/4phJROuA8W0z2lGBT8U5Zy/Untitled?node-id=0-1&p=f&t=3sQDJRu9TM5Q84sP-0
+
+API-nyckel: '92de42f066f71b06312ccd354d1b3f3e'; 
+API: https://api.themoviedb.org/3
