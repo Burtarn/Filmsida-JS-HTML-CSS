@@ -109,14 +109,14 @@ document.getElementById('searchButton').addEventListener('click', () => {
     const errorMessage = document.getElementById('errorMessage');
     
     if (query) {
-        errorMessageSearch.style.display = 'none'; // Dölj felmeddelandet
+        errorMessageSearch.style.display = 'none'; 
         searchMovies(query);
     } else {
         errorMessageSearch.style.display = 'block'; 
         
         setTimeout(() => {
             errorMessageSearch.style.display = 'none';
-        }, 3000);// Visa felmeddelandet
+        }, 3000);
     }
 });
 
@@ -230,7 +230,7 @@ function removeFromFavorites(movie) {
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     favorites = favorites.filter(fav => fav.id !== movie.id); 
     localStorage.setItem('favorites', JSON.stringify(favorites)); 
-    alert(`"${movie.title}" har tagits bort från dina favoriter.`);
+
 
 
     displayFavorites();

@@ -607,7 +607,6 @@ span {
         text-align: center;
     }
     
-    /* Drop-down styling */
     #genreSelect {
         width: 60%;
         padding: 10px;
@@ -637,7 +636,7 @@ span {
     }
     
     #fetchMoviesBtn:hover {
-        background-color: var(--carolina-blue);
+        background-color:  #0056b3;
         transform: translateY(-2px);
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
@@ -717,7 +716,6 @@ span {
         }
     }
 
-  /* Responsivitet */
     @media (max-width: 768px) {
         #searchInput {
         max-width: 90%;
