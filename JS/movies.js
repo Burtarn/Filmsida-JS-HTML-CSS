@@ -106,10 +106,17 @@ fetchTrendingMovies();
 
 document.getElementById('searchButton').addEventListener('click', () => {
     const query = document.getElementById('searchInput').value.trim();
+    const errorMessage = document.getElementById('errorMessage');
+    
     if (query) {
+        errorMessageSearch.style.display = 'none'; // Dölj felmeddelandet
         searchMovies(query);
     } else {
-        alert('Skriv något för att söka!');
+        errorMessageSearch.style.display = 'block'; 
+        
+        setTimeout(() => {
+            errorMessageSearch.style.display = 'none';
+        }, 3000);// Visa felmeddelandet
     }
 });
 

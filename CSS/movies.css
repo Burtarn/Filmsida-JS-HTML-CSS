@@ -167,6 +167,13 @@ span {
     #searchButton:active {
         background-color: #004080;
     }
+
+    #errorMessageSearch {
+        display: none;
+        color: red;
+        font-size: 1.5rem;
+
+    }
     
 
     #movieResults {
@@ -233,6 +240,7 @@ span {
 
     #favoritesContainer h4 {
         color: red;
+        font-size: 1.5rem;
     }
     
 
