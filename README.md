@@ -4,7 +4,7 @@ Detta är min sida "Fredagsmys inc" som är en sida för film. En sida där man 
 
 Jag hämtar och hanterar JSON-data med hjälp av asynkronitet och presenterar det dynamiskt på min sida. Den stora majoriteten av min data på sidan är skapat dynamiskt via hämtning av json och API. Information om filmerna hämtas via API; themoviedb.org. Jag har även valt att skapa en egen json-server för att jobba ytterligare mot API. 
 
-Jag har följt de 6 UI/UX principerna där sidan har en tydlig färgkombo, enkel att navigera och interaktion med användaren där det krävs.
+Jag har följt de 6 UI/UX principerna där sidan har en tydlig färgkombo, enkel att navigera och interaktion med användaren där det krävs. Och har goda resultat via lighthouse. 
 
 
 
