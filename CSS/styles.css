@@ -277,9 +277,9 @@
     }
     
     .card-list .card-item .message-button:hover {
-        background-color: var(--mint);
-        border: 1px solid #fff;
-        color: blue;
+        background-color: var(--prussian-blue);
+        border: 3px solid var(--mint);
+        color: var(--mint);
     }
     
     .slider-wrapper .swiper-pagination-bullet {

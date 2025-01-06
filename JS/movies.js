@@ -235,7 +235,7 @@ function displayFavorites() {
     favoritesContainer.innerHTML = ''; 
 
     if (favorites.length === 0) {
-        favoritesContainer.innerHTML = '<p>Du har inga favoriter än.</p>';
+        favoritesContainer.innerHTML = '<h4>Du har inga favoriter än.</h4>';
         return;
     }
 
@@ -254,7 +254,7 @@ function displayFavorites() {
         movieDiv.innerHTML = `
             <img src="${posterPath}" alt="${movie.title}">
             <h3>${movie.title}</h3>
-            <p>${movie.release_date || 'Okänt utgivningsdatum'}</p>
+            <p>${movie.release_date}</p>
             <button class="remove-favorite-btn" onclick='removeFromFavorites(${JSON.stringify(movie)})'>Ta bort från favoriter</button>
         `;
         favoritesContainer.appendChild(movieDiv);
@@ -324,6 +324,7 @@ loadGenres();
 document.addEventListener('DOMContentLoaded', () => {
     displayFavorites(); 
 });
+
 
 
 function errorHandle(errorOrResponse) {
