@@ -4,31 +4,39 @@ const navbar = document.querySelector('.navbar');
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
+};
 
-}
-
-
-const API_KEY = '92de42f066f71b06312ccd354d1b3f3e'; 
-const API_URL = 'https://api.themoviedb.org/3/search/movie';
+const API_KEY = '';
 const BASE_URL = 'https://api.themoviedb.org/3';
+const API_URL = `${BASE_URL}/search/movie`;
 
-
-async function fetchTrendingMovies() {
+async function loadData() {
     try {
-        const response = await fetch(`${BASE_URL}/trending/movie/day?api_key=${API_KEY}`);
-        if (!response.ok) {
-            errorHandle({ status: response.status });
+        const [trendingResponse, genresResponse] = await Promise.all([
+            fetch(`${BASE_URL}/trending/movie/day?api_key=${API_KEY}`),
+            fetch(`${BASE_URL}/genre/movie/list?api_key=${API_KEY}&language=sv-SE`)
+        ]);
+
+        if (!trendingResponse.ok || !genresResponse.ok) {
+            errorHandle({ status: trendingResponse.status || genresResponse.status });
             return;
         }
-        const data = await response.json();
-        displayTrendingMovies(data.results.slice(0, 14));
+
+        const [trendingData, genresData] = await Promise.all([
+            trendingResponse.json(),
+            genresResponse.json()
+        ]);
+
+        displayTrendingMovies(trendingData.results.slice(0, 14));
+        populateGenresDropdown(genresData.genres);
     } catch (error) {
         errorHandle(error);
     }
 }
+
 function displayTrendingMovies(movies) {
     const trendingContainer = document.getElementById('trendingMovies');
-    trendingContainer.innerHTML = ''; 
+    trendingContainer.innerHTML = '';
 
     if (movies.length === 0) {
         trendingContainer.innerHTML = '<p>Inga trendiga filmer hittades.</p>';
@@ -54,79 +62,24 @@ function displayTrendingMovies(movies) {
     });
 }
 
-async function showMovieDetails(movieId) {
-    try {
-        const response = await fetch(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}`);
-        if (!response.ok) {
-            errorHandle({ status: response.status });
-            return;
-        }
-        const movie = await response.json();
+function populateGenresDropdown(genres) {
+    const genreSelect = document.getElementById('genreSelect');
+    genreSelect.innerHTML = '<option value="">Välj en genre</option>';
 
-        const modal = document.getElementById('movieModal');
-        const modalContent = document.getElementById('modalContent');
-        modalContent.innerHTML = `
-            <h2>${movie.title}</h2>
-            <p><strong>Releasedatum:</strong> ${movie.release_date}</p>
-            <p><strong>Handling:</strong> ${movie.overview}</p>
-            <p><strong>Betyg:</strong> ${movie.vote_average}</p>
-        `;
-
-
-        modal.style.display = 'block';
-    } catch (error) {
-        errorHandle(error);
-    }
+    genres.forEach(genre => {
+        const option = document.createElement('option');
+        option.value = genre.id;
+        option.textContent = genre.name;
+        genreSelect.appendChild(option);
+    });
 }
-
-
-function closeModal() {
-    const modal = document.getElementById('movieModal');
-    modal.style.display = 'none'; 
-}
-
-function showModal(movie) {
-    const modal = document.getElementById('movieModal');
-    const modalContent = document.getElementById('modalContent');
-
-    modalContent.innerHTML = `
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2>${movie.title}</h2>
-        <p>Utgivningsdatum: ${movie.release_date}</p>
-        <p>${movie.overview}</p>
-    `;
-    modal.style.display = 'flex'; 
-}
-
-loadGenres();
-
-fetchTrendingMovies();
-
-
-
-document.getElementById('searchButton').addEventListener('click', () => {
-    const query = document.getElementById('searchInput').value.trim();
-    const errorMessage = document.getElementById('errorMessage');
-    
-    if (query) {
-        errorMessageSearch.style.display = 'none'; 
-        searchMovies(query);
-    } else {
-        errorMessageSearch.style.display = 'block'; 
-        
-        setTimeout(() => {
-            errorMessageSearch.style.display = 'none';
-        }, 3000);
-    }
-});
-
 
 async function searchMovies(query) {
     try {
         const response = await fetch(`${API_URL}?api_key=${API_KEY}&query=${encodeURIComponent(query)}`);
         if (!response.ok) {
             errorHandle({ status: response.status });
-            return; 
+            return;
         }
         const data = await response.json();
         displayMovies(data.results);
@@ -134,7 +87,6 @@ async function searchMovies(query) {
         errorHandle(error);
     }
 }
-
 
 function displayMovies(movies) {
     const resultsContainer = document.getElementById('movieResults');
@@ -171,7 +123,6 @@ function displayMovies(movies) {
     addFavoriteListeners();
 }
 
-
 function addFavoriteListeners() {
     const favoriteButtons = document.querySelectorAll('.favorite-button');
     favoriteButtons.forEach(button => {
@@ -197,7 +148,6 @@ function saveToFavorites(movie) {
     displayFavorites();
 }
 
-
 function displayFavorites() {
     const favoritesContainer = document.getElementById('favoritesContainer');
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -211,7 +161,7 @@ function displayFavorites() {
     favorites.forEach(movie => {
         const movieDiv = document.createElement('div');
         movieDiv.className = 'movieFavorite';
-        
+
         const posterPath = movie.poster_path
             ? `https://image.tmdb.org/t/p/w200${movie.poster_path}`
             : 'https://via.placeholder.com/100x150?text=Ingen+Bild';
@@ -228,59 +178,11 @@ function displayFavorites() {
 
 function removeFromFavorites(movie) {
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    favorites = favorites.filter(fav => fav.id !== movie.id); 
-    localStorage.setItem('favorites', JSON.stringify(favorites)); 
-
-
+    favorites = favorites.filter(fav => fav.id !== movie.id);
+    localStorage.setItem('favorites', JSON.stringify(favorites));
 
     displayFavorites();
 }
-
-function displayFavorites() {
-    const favoritesContainer = document.getElementById('favoritesContainer');
-    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    favoritesContainer.innerHTML = ''; 
-
-    if (favorites.length === 0) {
-        favoritesContainer.innerHTML = '<h4>Du har inga favoriter än.</h4>';
-        return;
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        displayFavorites(); 
-    });
-
-    favorites.forEach(movie => {
-        const movieDiv = document.createElement('div');
-        movieDiv.className = 'movieFavorite';
-        
-        const posterPath = movie.poster_path
-            ? `https://image.tmdb.org/t/p/w200${movie.poster_path}`
-            : 'https://via.placeholder.com/100x150?text=Ingen+Bild';
-
-        movieDiv.innerHTML = `
-            <img src="${posterPath}" alt="${movie.title}">
-            <h3>${movie.title}</h3>
-            <p>${movie.release_date}</p>
-            <button class="remove-favorite-btn" onclick='removeFromFavorites(${JSON.stringify(movie)})'>Ta bort från favoriter</button>
-        `;
-        favoritesContainer.appendChild(movieDiv);
-    });
-}
-
-async function loadGenres() {
-    const response = await fetch(`${BASE_URL}/genre/movie/list?api_key=${API_KEY}&language=sv-SE`);
-    const data = await response.json();
-    const genreSelect = document.getElementById('genreSelect');
-    
-    data.genres.forEach(genre => {
-        const option = document.createElement('option');
-        option.value = genre.id;
-        option.textContent = genre.name;
-        genreSelect.appendChild(option);
-    });
-}
-
 
 async function fetchMoviesByGenre(genreId) {
     const response = await fetch(`${BASE_URL}/discover/movie?api_key=${API_KEY}&language=sv-SE&with_genres=${genreId}`);
@@ -288,10 +190,9 @@ async function fetchMoviesByGenre(genreId) {
     return data.results;
 }
 
-
 function renderMovies(movies) {
     const container = document.getElementById('moviesContainer');
-    container.innerHTML = ''; 
+    container.innerHTML = '';
 
     const limitedMovies = movies.slice(0, 5);
 
@@ -308,6 +209,20 @@ function renderMovies(movies) {
     });
 }
 
+document.getElementById('searchButton').addEventListener('click', () => {
+    const query = document.getElementById('searchInput').value.trim();
+    const errorMessageSearch = document.getElementById('errorMessageSearch');
+
+    if (query) {
+        errorMessageSearch.style.display = 'none';
+        searchMovies(query);
+    } else {
+        errorMessageSearch.style.display = 'block';
+        setTimeout(() => {
+            errorMessageSearch.style.display = 'none';
+        }, 3000);
+    }
+});
 
 document.getElementById('fetchMoviesBtn').addEventListener('click', async () => {
     const genreId = document.getElementById('genreSelect').value;
@@ -316,23 +231,14 @@ document.getElementById('fetchMoviesBtn').addEventListener('click', async () => 
     if (genreId) {
         const movies = await fetchMoviesByGenre(genreId);
         renderMovies(movies);
-        errorMessage.style.display = 'none';  
+        errorMessage.style.display = 'none';
     } else {
-        errorMessage.style.display = 'block'; 
+        errorMessage.style.display = 'block';
         setTimeout(() => {
-            errorMessage.style.display = 'none';  
+            errorMessage.style.display = 'none';
         }, 3000);
     }
 });
-
-
-loadGenres();
-
-document.addEventListener('DOMContentLoaded', () => {
-    displayFavorites(); 
-});
-
-
 
 function errorHandle(errorOrResponse) {
     if (errorOrResponse.status) {
@@ -357,3 +263,9 @@ function errorHandle(errorOrResponse) {
     }
     alert('Ett fel uppstod. Försök igen senare.');
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadData();
+    displayFavorites();
+});
