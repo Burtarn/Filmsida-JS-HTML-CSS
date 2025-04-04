@@ -28,5 +28,13 @@ Kom igång:
 
 Figma: https://www.figma.com/design/4phJROuA8W0z2lGBT8U5Zy/Untitled?node-id=0-1&p=f&t=3sQDJRu9TM5Q84sP-0
 
-API-nyckel: '92de42f066f71b06312ccd354d1b3f3e'; 
 API: https://api.themoviedb.org/3
+
+
+
+
+![Skärmbild 2025-04-04 150319](https://github.com/user-attachments/assets/7480b2b1-6c6a-4eae-ab35-806c502ceee0)
+![Skärmbild 2025-04-04 150303](https://github.com/user-attachments/assets/18a53618-c359-4110-b4f9-655b59159452)
+
+
+
